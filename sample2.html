@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satellite Dashboard</title>
+    <style>
+        /* Global Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1d1b37;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            width: 90%;
+            height: 90vh;
+            max-width: 1200px;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            width: 20%;
+            background-color: #26266e;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .sidebar h1 {
+            color: #ff4747;
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+
+        .sidebar p {
+            margin: 20px 0;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        /* Main Dashboard Styling */
+        .main {
+            width: 80%;
+            background-color: #2a265f;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #3c397e;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .sensor, .predictions, .ground-station {
+            grid-column: span 1;
+        }
+
+        .satellite, .speed, .battery {
+            grid-column: span 1;
+        }
+
+        .graph {
+            grid-column: span 2;
+            height: 200px;
+            background-color: #4b4790;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        /* Individual Card Styling */
+        .card h2 {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+
+        .sensor p, .battery p, .speed p {
+            font-size: 1em;
+            color: #b5b4d6;
+        }
+
+        .battery .status {
+            font-size: 1.5em;
+            color: #4af04a;
+            margin-top: 10px;
+        }
+
+        .graph .graph-placeholder {
+            width: 100%;
+            height: 100%;
+            background-color: #3c3a6b;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h1>Tessat</h1>
+            <p>Dashboard</p>
+            <p>Graphs</p>
+            <p>Map</p>
+            <p>Data</p>
+            <p>Predictions</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main">
+            <!-- Sensor Data -->
+            <div class="card sensor">
+                <h2>Satellite Sensors</h2>
+                <p>Temperature: 35°C</p>
+                <p>Humidity: 56%</p>
+                <p>Altitude: 1000m</p>
+                <p>Gyroscopes: X: 867, Y: -567, Z: 200</p>
+            </div>
+
+            <!-- Satellite Status -->
+            <div class="card satellite">
+                <h2>CAN SATELLITE</h2>
+                <p>Ready to Launch</p>
+            </div>
+
+            <!-- Speed -->
+            <div class="card speed">
+                <h2>Speed</h2>
+                <p>80 m/s</p>
+                <p>Based on Sensor Data</p>
+            </div>
+
+            <!-- Battery -->
+            <div class="card battery">
+                <h2>Battery</h2>
+                <p>Time Left: 30 min</p>
+                <p>Current: 1A</p>
+                <p>Voltage: 5.2V</p>
+                <div class="status">95% Remaining</div>
+            </div>
+
+            <!-- Predictions -->
+            <div class="card predictions">
+                <h2>Predictions</h2>
+                <p>(+5) more in 2021</p>
+            </div>
+
+            <!-- Graph Data -->
+            <div class="card graph">
+                <h2>Graph Data</h2>
+                <div class="graph-placeholder">
+                    <!-- Placeholder for Graph Image -->
+                </div>
+            </div>
+
+            <!-- Ground Station -->
+            <div class="card ground-station">
+                <h2>Ground Station</h2>
+                <p>Temperature: 45°C</p>
+                <p>Humidity: 60%</p>
+                <p>Pressure: 80 atm</p>
+                <p>Signal: 40 mbps</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

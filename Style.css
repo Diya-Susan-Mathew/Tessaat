@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a3d;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+}
+.sidebar {
+    width: 20%;
+    background-color: #26266e;
+    padding: 20px;
+}
+.sidebar h1 {
+    color: #ff4747;
+}
+.sidebar p {
+    margin: 20px 0;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Main Dashboard Styling */
+.main {
+    width: 80%;
+    background-color: #2a265f;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+.boxes{
+    display:flex;
+    justify-content: space-between;
+    gap:20px;
+}
+.box{
+    background-color:#0f0f27 ;
+    padding:20px;
+    width:200px;
+    border-radius: 8px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.2);
+    
+}
+/* #box1{
+    height:100px;
+    width:100px;
+    background-color:#0a0a1f ;
+    border: 2px solid black;
+    display:inline-block;
+    padding-left:30px;
+} 
+#box2{
+    height:100px;
+    width:100px;
+    background-color:#0a0a1f ;
+    border: 2px solid black;
+    display:inline-block;
+    padding-left:30px;
+}
+#box3{
+    height:100px;
+    width:100px;
+    background-color:#0a0a1f ;
+    border: 2px solid black;
+    display:inline-block;
+    padding-left:30px;
+}
+#box4{
+    height:100px;
+    width:100px;
+    background-color:#0a0a1f ;
+    border: 2px solid black;
+    display:inline-block;
+    padding-left:30px;
+}*/
+card h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+.sensor, .battery, .speed, .predictions, .ground-station {
+    grid-column: span 1;
+}
+.graph {
+    grid-column: span 2;
+}
